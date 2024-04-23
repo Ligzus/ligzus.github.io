@@ -1,0 +1,230 @@
+@media (max-width: 599px) {
+    .center {
+    padding-left: 16px;
+    padding-right: 16px;
+    }
+
+    .header {
+        padding-top: 32px;
+    }
+
+    .heading {
+        padding-top: 0px;
+        padding-top: 32px;
+    }
+
+    h1 {
+        padding-top: 0px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        line-height: normal;
+    }
+
+    h3 {
+        font-size: 1.125rem;
+        line-height: normal;
+        padding-left: 0px;
+    }
+    
+    .header_input {
+        display: none;
+    }
+
+    .menu_links {
+        display: none;
+    }
+
+    .logo_top {
+        width: 99px;
+    }
+
+    .menu-mobile {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .top_text {
+        color: #FFF;
+        text-align: center;        
+        font-size: 3rem;        
+        font-weight: 600;
+    }
+
+    .par1 {
+        color: #FFF;
+        text-align: center;        
+        font-size: 16px;        
+        font-weight: 400;
+        line-height: 32px;
+    }
+
+    .heading_text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .catalog {        
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+
+    .heading {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .for {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        
+        &_item {
+            grid-column: 1 / -1;
+            height: 375px;
+            font-size: 28px;
+            line-height: 34px;
+
+            &_big {
+                height: 243.5px;
+            }
+        }               
+    }
+
+    .sp {
+        color: #000;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .product_catalog {
+        color: #000;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .product {
+        width: 343px;
+        box-sizing: border-box;
+    }
+    
+    .top_catalog {
+        background-position-x: -300px;       
+    }
+
+    .top {
+        background-position-x: -500px;
+    }    
+
+    .top_cart {
+        background-position-x: -735px;
+    }
+
+    .catalog_header {
+        flex-direction: column;
+        gap: 16px;
+    }    
+    
+    .cart_left {
+
+        &_photo_size {
+            display: none;
+        }
+    }
+
+    .cart_item {
+        padding-top: 16px;
+        padding-bottom: 0px;
+
+        .cart_item_name {
+            font-size: 18px;
+        }
+        
+        .cart_item_desc {         
+            font-size: 12px;
+        }
+
+        .cart_item_ptice {                 
+            font-size: 14px;
+        }
+    }
+
+    
+    .cart_name-text {
+        display: none;
+    }
+
+    .button_bottom_div {
+        margin-top: 32px;
+        margin-bottom: 0px;
+    }
+
+    .cart_content {
+        grid-column: span 12;
+    }
+    
+    .cart_form {
+        width: 343px;
+        grid-column: span 12;
+    }
+
+    .product-box {
+        padding-top: 32px;
+    }
+
+    .product-box-cart {
+        padding-top: 48px;
+    } 
+    
+    .price {
+        font-size: 1.125rem;
+    }
+
+    .price01 {
+        font-size: 1.125rem;
+    }
+
+    header_items {
+        height: 77px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        border-bottom: solid 0.5px #FFF;
+    }
+
+    .button_bottom-right {
+        appearance: none;
+        width: 163px;
+        background-color: transparent;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .button_bottom-right1 {
+        appearance: none;
+        width: 163px;
+        background-color: #000;
+        text-align: center;
+        font-size: 12px;
+        color: #FFF;
+    }
+
+    .cart_item1 {
+        padding-bottom: 24px;
+    }
+    
+}
+
+@media (max-width: 767px) {
+    .footer {
+        justify-content: center;
+    }
+}

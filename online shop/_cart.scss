@@ -1,0 +1,280 @@
+.top_cart {
+    height: 400px;
+    background-image: url(./img/background/back-cart.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cart {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 32px;
+    margin-top: 64px;
+
+    &_content {
+        grid-column: span 8; 
+        .cart_name-box {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 14px;
+            .cart_name-text {
+                color: #000;            
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+            
+        }       
+    }
+
+    &_item {
+        border-top: 0.5px solid #CACDD8;
+        padding-top: 25px;
+        padding-bottom: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: self-start;        
+        .cart_item_name {
+            all: unset;
+            color: #000;
+            font-family: Montserrat;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;            ;
+        }
+        .cart_item_desc {
+            color: #888;            
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        .cart_item_ptice {
+            color: #050505;                   
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+    }
+
+    &_left {
+        display: flex;
+        gap: 32px;
+
+        &_photo_size {
+            width: 173px;
+            height: 173px;
+        }
+    }
+
+    &_info {
+        width: 276px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        
+    }
+
+    &_link-box {
+        display: flex;
+        gap: 30px;
+    }
+
+    &_link {                                  
+        color: #000;            
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 210%;
+        text-decoration-line: underline;
+    }
+
+    &_link:hover {
+    text-decoration: none;
+    color: #888;
+    }
+
+    &_form {
+        height: 556px;
+        border-radius: 20px;
+        background: #F7F6F6;
+        grid-column: span 4;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        padding-top: 42px;
+
+        .fields {  
+            width: 288px;    
+            display: flex;
+            flex-direction: column;
+            gap: 44px;
+            margin-top: 35px;
+            margin-bottom: 64px;
+            .field {
+                background-color: transparent;
+                border: transparent;
+                border-bottom: 1px solid#CACDD8;                
+            }
+            
+            ::placeholder {
+                color: #000;                    
+                font-family: Montserrat;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }     
+
+        .itog {
+            display: flex;            
+            color: #000;            
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            :last-child {
+                color: #000;            
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                margin-left: 8px;
+            }
+        }   
+        
+        .to_order {
+            margin-top: 18px;
+            display: flex;
+            width: 290px;
+            height: 41px;
+            padding: 10px 63px 11px 90px;
+            border-radius: 20px;
+            border: 1px solid #040404;
+            background-color: transparent;
+            color: #000;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            cursor: pointer;
+            transition: background-color 0.5s, color 0.3s, transform 1s;
+        }
+        
+        .to_order:hover {
+            animation: rotate-hor-center 0.9s;
+            box-shadow: 0 0 10px #CACDD8;
+            background-color: #000;
+            color: #fff;
+        }
+    }
+       
+    .cart_input {
+        width: 71px;
+        height: 51px;
+        border-radius: 6px;
+        background: #F7F6F6;
+        border: none;
+        color: var(--Color---7, #000);
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 210%;       
+    }    
+}
+
+.catalog_cart_button {
+    display: inline-block;
+    padding-bottom: 32px;
+    color: #000;    
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration-line: underline;
+}
+
+.catalog_cart_button1 {
+    display: inline-block;
+    padding-bottom: 32px;
+    color: #000;    
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration-line: underline;
+}
+
+.catalog_cart_button:hover {
+    text-decoration: none;
+    color: #888;
+}
+
+.button_bottom_div {
+    margin-top: 50px;
+}
+
+@media (max-width: 425px) {
+    .catalog_cart_button {
+        display: none;
+    }
+
+    .catalog_cart_button1 {
+        display: block;
+    }
+
+}
+
+
+@media (min-width: 426px) {
+
+    .catalog_cart_button1 {
+        display: none;
+    }
+
+    .button_bottom-right {
+        width: 200px;
+        border-radius: 50px;
+        border: 1px solid #000;
+        display: inline-flex;
+        padding: 10px 0px 10px 0px;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        height: 37px;
+        font-weight: 400;
+        color: #000;
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        transition: 0.5s;
+    }
+
+    .button_bottom-right:hover {
+        color: #fff;
+        background-color: #000;
+        cursor: pointer;
+    }    
+
+    .catalog_cart_button {
+        padding-bottom: 0px; 
+        margin-bottom: 64px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    .button_bottom-right1:hover {
+        color: #000;
+        background-color: #fff;
+        cursor: pointer;
+    }
+}
