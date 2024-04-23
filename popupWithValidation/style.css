@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: PT Sans;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+input,
+select {
+    padding: 16px;
+    height: 56px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    width: 100%;
+}
+
+h1 {
+    color: rgb(12, 16, 20);
+    font-family: Montserrat;
+    font-size: 28px;
+}
+
+#open-btn {
+    width: 30%;
+    height: 10%;
+    font-size: 20px;
+    background: #E5266E;
+    color: #fafafa;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+#open-btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: #fafafa;
+    color: #E5266E;
+    border: 1px solid #E5266E;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 6% auto 18%;
+    padding: 53px 98px;
+    border: 1px solid #888;
+    max-width: 754px;
+    border-radius: 11px;
+    box-sizing: border-box;
+}
+
+#modal-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+    gap: 32px;
+}
+
+.modal-form-top{
+    display: flex;
+    justify-content: space-between;   
+    flex-wrap: wrap; 
+}
+
+
+/* Стили иконок с названиями */
+
+.input-with-title {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 352px;
+    gap: 32px;
+}
+
+.input-item {
+    position: relative;
+}
+
+.modal-form-top .input-item input,
+.input-item-last input {
+    padding-top: 22px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 8px;    
+}
+
+.input-title,
+.input-title-last,
+.input-title-photo {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 12px;
+    color: rgb(106, 110, 114);
+}
+
+.input-title-photo {
+    left: auto;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.input-title::before,
+.input-title-photo::before {
+    content: "✱ ";
+    color: red;
+}
+
+.direction {
+    padding-top: 22px;
+    padding-bottom: 8px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.625 4.74112L1.06694 0.183058C0.822865 -0.0610194 0.427135 -0.0610194 0.183058 0.183058C-0.0610199 0.427136 -0.0610199 0.822864 0.183058 1.06694L5.625 6.50888L11.0669 1.06694C11.311 0.822864 11.311 0.427136 11.0669 0.183058C10.8229 -0.0610194 10.4271 -0.0610194 10.1831 0.183058L5.625 4.74112Z" fill="%236A6E72"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 14px top 50%;
+    background-size: 14px auto;
+}
+
+/* Стили svg иконок внутри input */
+
+.input-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* Загрузка фото */
+
+.upload-photo {
+    position: relative;
+    align-self: center;
+    width: 163px;
+    height: 232px;
+}
+
+.upload-photo input[type="file"] {
+    display: none;
+}
+
+.upload-photo label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.upload-photo 
+.preview {
+    position: relative;
+    width: 100%;
+    height: 85%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-photo 
+.preview img {
+    height: 163px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    filter: brightness(1);
+    transition: filter 0.5s ease;
+    box-sizing: border-box;
+}
+
+.upload-photo:hover 
+.preview img {
+    filter: brightness(0.5);
+}
+
+.preview span {
+    display: none;
+}
+
+.upload-photo:hover .preview span {
+    display: block;
+}
+
+
+.preview span {
+    font-size: 15px;
+    color: #fafafa;   
+    position: absolute;
+    text-decoration: underline;
+    bottom: 40%;
+    z-index: 1;
+}
+
+.preview span:only-of-type svg {
+    display: block;
+    margin: auto;
+}
+
+
+/* Кнопки формы */
+
+.modal-btns {
+    display: flex;
+    flex-direction: column;
+    height: 87px;
+    margin-top: 18px;
+}
+
+.modal-btns button {
+    height: 50%;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.modal-btns button:first-child {
+    color: rgb(255, 255, 255);
+    font-family: Lato, Helvetica, sans-serif;;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0px;
+    text-align: center;
+    background: #E5266E;
+}
+
+#submit-btn:disabled {
+    opacity: 0.5;
+}
+
+.modal-btns button:last-child {
+    width: 20%;
+    align-self: center;
+    background-color: transparent;
+    color: #0848C0;
+}
+
+
+@media (max-width: 715px) {
+
+    .modal-content {
+        padding: 33px 50px;
+    }
+
+    .input-with-title {
+        width: 100%;
+    }
+
+    .input-title-photo {
+        margin-top: 12px;
+        font-size: 12px;
+        font-weight: 400;
+        text-align: start;
+        padding-left: 16px;
+    }
+
+    .upload-photo 
+    .preview {
+        height: 100%;
+    }
+
+    #open-btn {
+        width: 80%;
+        height: 20%;
+        font-size: 20px;
+    }
+
+    .modal-btns button {
+        font-size: 12px;
+    }
+
+    input,
+    select {
+    font-size: 12px;
+}
+
+}  
