@@ -103,6 +103,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0;
 }
 
 .item-img img {
@@ -193,6 +194,10 @@ h1 {
 
 
 @media (max-width: 1024px) {
+    .header h1 {
+        padding-top: 20px;
+    }
+
     .top__content {
         transition: all 0.5s;
     }
@@ -220,22 +225,33 @@ h1 {
 
 @media (max-width: 1050px) {
     .header h1 {
-        font-size: 48px;
-        padding-left: 15px;
-        padding-right: 15px;
+        font-size: 36px;
+        padding-left: 10%;
+        padding-right: 10%;
     }
  
     .header__desc {
-        font-size: 28px;
-        padding-top: 2%;
+        font-size: 24px;
+        padding-top: 1%;
     }
 
     .top__content {
+        margin-top: -70px;
         margin-bottom: 50px;
+    }
+
+    .item-img {
+        transform: scale(0.8);
     }
  
     .top > img:first-of-type {
-        margin-top: -210px;
+        margin-top: -340px;
+        padding: 0px;
+        transform: scale(0.75);
+    }
+
+    .top > img:first-of-type:hover {
+        transform: scale(0.76);
     }
 
     .top > img:last-child {
@@ -251,6 +267,27 @@ h1 {
     }
 }
 
+@media (max-width: 963px) {
+    .header h1 {
+        font-size: 32px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .header__desc {
+        font-size: 20px;
+        padding-top: 0;
+    }
+
+    .top__content {
+        margin-top: -40px;
+    }
+
+    .top > img:first-of-type {
+        margin-top: -350px;
+    }
+}
+
 @media (max-width: 939px) {
     .features {
         justify-content: space-evenly;
@@ -263,23 +300,17 @@ h1 {
 }
 
 @media (max-width: 791px) {
-    .header h1 {
-        font-size: 36px;
-    }
-
-    .header__desc {
-        font-size: 20px;
-    }
-
     .top {
         margin-bottom: 40px;    
     }
 
     .top > img:first-of-type {
-        margin-top: -250px;
+        transform: scale(0.9);
+        margin-top: -340px;
     }
 
     .top__content {
+        margin-top: -30px;
         margin-bottom: 40px;
         margin-left: 5px;
         margin-right: 5px;
@@ -294,7 +325,7 @@ h1 {
     }
 }
 
-@media (max-width: 731px) {
+@media (max-width: 723px) {
     .item-img {
         transform: scale(0.8);
     }
@@ -308,7 +339,7 @@ h1 {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 705px) {
     .header h1 {
         font-size: 28px;
     }
@@ -318,8 +349,7 @@ h1 {
     }
 
     .top > img:first-of-type {
-        padding: 20px;
-        margin-top: -300px;
+        margin-top: -330px;
     }
 }
 
